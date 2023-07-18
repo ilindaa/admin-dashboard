@@ -11,6 +11,46 @@
     grid-template-columns: 1fr 4fr;
 }
 
+.sidebar {
+    background-color: #1992d4;
+    grid-row: 1 / 4;
+}
+
+.header,
+.nav {
+    background-color: #ffffff;
+    grid-column: 2 / span 1;
+}
+
+.main-content {
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.card,
+.announcements-section,
+.trending-section {
+    background-color: #ffffff;
+}
+
+.cards-section {
+    display: grid;
+    gap: 1rem;
+}
+
+
+.svg-icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+/*
+.svg-white {
+    filter: invert(100%) sepia(5%) saturate(7479%) hue-rotate(204deg) brightness(113%) contrast(103%);
+} */
+
+/* Profile Pictures (pfp) */
 .pfp-small,
 .pfp-big {
     border-radius: 50%;
