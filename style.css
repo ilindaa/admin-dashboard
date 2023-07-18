@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.pfp-small,
+.pfp-big {
+    border-radius: 50%;
+}
+
+.pfp-small {
+    height: 5rem;
+    width: 5rem;
+}
+
+.pfp-big {
+    height: 7rem;
+    width: 7rem; 
+}
