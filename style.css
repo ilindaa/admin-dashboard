@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -6,30 +7,36 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* .body,
 .container {
     height: 100vh;
+    width: 100%;
+} */
+
+.container {
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
 /* Header, Nav */
-.header,
-.nav {
-    background-color: #ffffff;
-    grid-column: 2 / span 1;
-    padding: 1rem 3rem 0rem 3rem;
-}
+.head-nav-col-span {
+    grid-column: 2 / span 2;
 
-/* Header */
-.header {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    padding: 1rem 3rem;
 }
 
-.search-side {
+.left,
+.right {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+.right {
+    justify-content: flex-end;
 }
 
 .search-bar {
@@ -45,56 +52,22 @@
     outline: none;
 }
 
-.user-side {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
-}
-
-/* Nav */
-.nav {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    padding-bottom: 1rem;
-}
-
-.hi-side {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.hi-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.nav-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-button,
-.sidebar {
-    background-color: #1992d4;
-}
-
 button {
+    background-color: #1992d4;
     color: #ffffff;
+    height: 2.5rem;
+    width: 6rem;
     border: none;
     border-radius: 2rem;
-    padding: 0.75rem 1.75rem;
     cursor: pointer;
 }
 
 /* Sidebar */
 .sidebar {
-    grid-row: 1 / 4;
+    background-color: #1992d4;
     color: #ffffff;
+    grid-row: 1 / span 3;
+    padding: 1rem;
 }
 
 a {
@@ -106,69 +79,80 @@ a {
 .main-content {
     background-color: #e2e8f0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    padding: 2rem 1rem;
+    grid-template-columns: 2.5fr 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
 }
 
-/* Your Projects */
-.your-projects {
-    grid-row: 1 / 3;
+/* Section Areas */
+.projects-area {
+    grid-row: 1 / span 2;
 }
 
-/* Inside Sections */
+.trending-area {
+    grid-column: 2 / span 1;
+}
+
+/* Inside Section Areas */
+.section-title {
+    padding: 1rem 0;
+}
+
 .card,
-.announcements-section,
-.trending-section {
+.announcement-box,
+.trending-box {
     background-color: #ffffff;
     border-radius: 1rem;
     padding: 2rem;
 }
 
-.cards-section,
-.announcements-section,
-.trending-section {
-    /* Space below the titles */
-    margin-top: 1rem;
-}
-
-.cards-section {
+/* Card */
+.card-box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
-/* Trending section */
-.trending-section {
+.card {
+    border-left: 1rem solid #f0b429;
+}
+
+/* Announcement */
+hr {
+    margin: 1.5rem 0;
+}
+
+/* Trending */
+.trending-box {
     display: grid;
     gap: 2rem;
 }
 
-.user {
+.trending {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(2, 1fr);
+}
+
+.pfp-big {
+    grid-row: 1 / 3;
+    display: grid;
     align-items: center;
 }
 
-.user-handle {
-    align-self: flex-end;
-    padding-bottom: 0.25rem;
-}
-
-.user-text {
-    align-self: flex-start;
-}
-
-.user .pfp-big {
-    grid-row: 1 / 3;
-}
-
-.user-text {
+.trending-text {
     color: #636363;
+    grid-column: 2 / 3;
 }
 
-/* SVG icons, filter(s) */
+/* Star, Eye, Fork | Upon Hover -> Change to Fill Icons(?) */
+.card-icons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+/* SVG icons */
 .svg-icon {
     height: 1.5rem;
     width: 1.5rem;
@@ -183,7 +167,7 @@ a {
     filter: invert(100%) sepia(5%) saturate(7479%) hue-rotate(204deg) brightness(113%) contrast(103%);
 }
 
-/* Profile Pictures (pfp) */
+/* Pictures */
 .pfp-small,
 .pfp-big {
     border-radius: 50%;
@@ -196,5 +180,5 @@ a {
 
 .pfp-big {
     height: 4rem;
-    width: 4rem; 
+    width: 4rem;
 }
