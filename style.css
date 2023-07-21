@@ -202,6 +202,13 @@ hr {
     filter: invert(100%) sepia(5%) saturate(7479%) hue-rotate(204deg) brightness(113%) contrast(103%);
 }
 
+/* SVG gray color */
+.star,
+.eye,
+.fork {
+    filter: invert(17%) sepia(1%) saturate(1008%) hue-rotate(359deg) brightness(93%) contrast(88%);
+}
+
 /* Pictures */
 .pfp-small,
 .pfp-big {
