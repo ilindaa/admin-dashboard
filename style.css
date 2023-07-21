@@ -7,6 +7,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root {
+    /* Slate */
+    --main-color: #1D3557;
+    --darker-main-color: hsl(215, 50%, 13%);
+    --secondary-color: #ED3946;
+}
+
 body,
 .container {
     height: 100vh;
@@ -57,7 +64,6 @@ button {
     font-size: 1rem;
     border: none;
     border-radius: 2rem;
-    cursor: pointer;
 }
 
 /* Sidebar */
@@ -73,7 +79,6 @@ a {
     justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
-    padding-bottom: 0.75rem;
 }
 
 a {
@@ -82,8 +87,15 @@ a {
     gap: 1.5rem;
 }
 
+a:hover {
+    padding: 0.1rem;
+    border-radius: 0.1rem;
+}
+
 .top,
 .bottom {
+    display: grid;
+    gap: 0.75rem;
     padding: 3rem 0 0 0.75rem; /* Padding Top/Left */
 }
 
@@ -132,7 +144,7 @@ a {
 }
 
 .card {
-    border-left: 0.75rem solid #f0b429;
+    border-left: 0.75rem solid var(--secondary-color);
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -209,7 +221,7 @@ hr {
 /* Grouped Colors */
 button,
 .sidebar {
-    background-color: #1992d4;
+    background-color: var(--main-color);
     color: #ffffff;
 }
 
@@ -279,4 +291,23 @@ a,
 .trending-box {
     box-shadow: 3px 5px 4px #cdd2d9;
     z-index: 1;
+}
+
+/* Pointer Cursor */
+button,
+.bell,
+.star,
+.eye,
+.fork {
+    cursor: pointer;
+}
+
+/* Hover */
+a:hover,
+button:hover {
+    background-color: var(--darker-main-color);
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
